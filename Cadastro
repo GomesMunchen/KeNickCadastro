@@ -12,7 +12,7 @@ void main(){
 	printf("Cadastrar quantos? Até 10: ");
 	do {
 		scanf("%d",&max); 
-		if ( max<1 || max>10 ) { printf("Só podem ser feito até 10 cadastros. Digite um número válido!\n");}
+		if ( max<1 || max>10 ) printf("Só podem ser feito até 10 cadastros. Digite um número válido!\n");
 	}
 	
 	while( max<1 || max>10 );
@@ -29,14 +29,19 @@ void main(){
 		scanf("%d",&idade[i]);
 		
 		printf("NÍVEL: ");
-		scanf("%d",&nivel[i]);
+		do {
+			scanf("%d",&nivel[i]);
+			if ( nivel[i] < 0 || nivel[i] > 5) printf("Nível inválido! Digite um nível entre 0 e 5!\n");
+		}
+			
+		while ( nivel[i] < 0 || nivel[i] > 5 );
 		
 		i = i + 1;
 	}
 
 	i = 0;
 	while(i<max){
-		printf("\n%s - %d [%d]", nome[i], idade[i], nivel[i]);
+		printf("\nDados Armazenados:\n%s - %d [%d]", nome[i], idade[i], nivel[i]);
 		i = i + 1;
 	}
 	
