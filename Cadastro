@@ -1,3 +1,6 @@
+#include <locale.h>
+#include <string.h>
+
 char nome[9][32];
 int  idade[9];
 int  nivel[9];
