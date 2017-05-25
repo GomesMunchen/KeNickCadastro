@@ -9,7 +9,7 @@ int  max, i;
 
 void main(){
 	setlocale(LC_ALL,"");
-	printf("Cadastro por Kennedy");
+	printf("Cadastro por Kennedy e Monique");
 	printf("Cadastrar quantos? Até 10: ");
 	do {
 		scanf("%d",&max); 
